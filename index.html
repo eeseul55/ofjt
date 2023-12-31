@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://eeseul55.github.io/ofjt/images/opimg.jpg" />
     <meta property="og:title" content="JEJU" /> 
@@ -13,8 +14,7 @@
 
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<!--     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
 </head>
 <body>
@@ -51,9 +51,9 @@
         </div>
     </div>
     <script>
-        // $(document).ready(function(e) {
-            document.querySelector('#image-map').rwdImageMaps();
-        // });
+        $(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+        });
     </script>
 </body>
 </html>
